@@ -4,7 +4,7 @@ import urllib2
 
 BINGBASE = 'http://www.bing.com/search?q='
 BINGEND = '&go=&form=QBRE&filt=all'
-WEBSITE = 'opentable.com'
+WEBSITE = 'opentable'
 
 def getRest(inp):
     f = open(inp, 'r')
