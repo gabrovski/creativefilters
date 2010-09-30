@@ -1,0 +1,13 @@
+- make a list of restaurants that are creative
+- choose website for reviews of these restaurants (yelp/zagat...)
+- download a lot of reviews for a variety of restauants (using a concurrent scraper
+- parse out reviews, ratings
+- build a simple bayesian filter using wikipedia
+- teach the filter to recognize creativity
+- do some testing and analyze results
+- figure out improvements
+- do some research on hardcore probabilstic models for this type of problem
+- determine feasibility of other projects based on your experience from this one
+- have a beer in an ice cold mug for a job well done
+- have a a second beer if the results are actually good
+- drink heavily if it looks like you can get rich with this (unlikley but who knows)
