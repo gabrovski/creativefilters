@@ -1,0 +1,11 @@
+This is an attempt at creating a filter for text (reveiws of restaurants online) using the principles of simple spam filtering. The original idea for the use of the filter comes from Prof. Andrew King at Tuck Business School. 
+
+This is a personal project that I am doing just for fun. If hoewver it turns out to be somewaht accurate it will most likely be used for actual research. Right now the goal of the project is simply to have fun with some statistical tools and dirty real data.
+
+There will be two stages of this project. The first part will gather data from hopefully zagat.com (tricky due to the extensive use of browser based scripts). Other websites might be used too. The data gathering stage will target restaurants that are well known for their creativity (uhm, Oleana?).
+
+The second stage will be focused on building an actual filter through some simple machine learning tricks, mostly bayes theorem. The desing will be straightforward and simple (it can all be looked up from the source of all knowledge - wikipedia). depending on the results attempts at improving the accuracy of the filter might come after the basics is done.
+
+log term goals of project:
+- deterimine usability of the filter for figuring out the general meaning of human speech (in writing)
+- hopefully learn a few tricks to apply to a long-term wwet-dream project I am hoping to realize that will use similar probabilistic models for translation/spell checking. 
