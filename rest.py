@@ -1,6 +1,8 @@
 #####
 import re
 import urllib2
+import time
+from threadScrape import scrape2
 
 BINGBASE = 'http://www.bing.com/search?q='
 BINGEND = '&go=&form=QBRE&filt=all'
@@ -20,7 +22,7 @@ def filterNames(l):
     res = []
     for x in l:
         if str(x[0]).rfind('\\x') == -1:
-            res.insert(0, x)
+            res.append(x)
     #print res
     return res
 
@@ -43,8 +45,27 @@ def getLink(txt, s):
     else:
         return None
 
-if __name__ == '__main__':
-    a = getRest('restaurants.csv')
+def getAllLinks(inp, out):
+    a = getRest(inp)
     a = filterNames(a)
-    r = lookUp(a[2][0]+a[2][len(a[2])-1],WEBSITE,BINGBASE, BINGEND)
-    print getLink(r, '(http://www.opentable.*?)\"')
+    w = open(out, "w")
+    for x in a:
+        r = lookUp(x[0]+x[len(x)-1],WEBSITE,BINGBASE, BINGEND)
+        l = getLink(r, '(http://www.opentable.*?)\"')
+        if l:
+            w.write(l)
+            w.write('\n')
+        time.sleep(1)
+    w.close()
+
+def revURL(directory, start, end):
+    pass
+
+if __name__ == '__main__':
+    f = open("links.txt", "r")
+    lst = f.readlines()
+    for i in xrange(len(lst)):
+        lst[i] = re.sub("\-reservatio.*", '', lst[i])
+    f.close()
+    #print lst
+    scrape2("opentable", 50, lst, '')
